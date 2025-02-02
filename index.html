@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Search</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <h1 class="page-title">Pokemon Search</h1>
+
+    <!-- Container to display Pokémon information -->
+    <div class="pokemon-info" id="pokemon-info"></div>
+    <!-- Input field for Pokémon name or ID -->
+    <div class="search-container">
+      <input
+        type="text"
+        class="search-container__input"
+        id="pokemon-input"
+        placeholder="Enter Pokemon name or ID"
+      />
+      <!-- Button to trigger the search -->
+      <button class="search-container__button" id="search-btn">Search</button>
+    </div>
+
+    <!-- Template for the Pokémon card -->
+    <template id="pokemon-card-template">
+      <div class="pokemon-card">
+        <h2 class="pokemon-card__title">{{name}}</h2>
+        <img class="pokemon-card__image" src="{{image}}" alt="{{name}}" />
+        <p class="pokemon-card__type">Type: {{type}}</p>
+      </div>
+    </template>
+
+    <!-- Link to the JavaScript file -->
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>
